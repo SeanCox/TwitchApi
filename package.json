@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node server/app.js",
+    "postinstall": "bower install && npm install"
   },
   "author": "",
   "license": "ISC",
