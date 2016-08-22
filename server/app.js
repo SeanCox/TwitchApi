@@ -1,15 +1,20 @@
 var express = require('express')
 var requestPack = require('request')
+//var path = require('path')
 
 var app = express()
+console.log(__dirname)
 
-app.get('/', function(request, response){
-  requestPack('https://api.twitch.tv/kraken/channels/darkwaywardsoul',function(error, res, body){
+app.use('/',express.static('./public'))
 
-    response.send(body)
+app.get('/twitchapi', function(request, response){
+  requestPack('https://api.twitch.tv/kraken/streams/HSdogdog',function(error, res, body){
+    response.send(JSON.parse(body))
   })
 })
 
-app.listen(1337, function(){
+var port = process.env.PORT || 1337
+
+app.listen(port, function(){
   console.log('Listening on port 1337')
 })

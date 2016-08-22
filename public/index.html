@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+    <title>Twitch App</title>
+  </head>
+  <body ng-app="TwitchApp" ng-controller="TwitchController">
+    <!-- <p>{{ api }}</p> -->
+    <img src="{{ api.stream.channel.logo }}" />
+    <h1 >User Name: {{ api.stream.channel.display_name }}</h1>
+    <h1 >Game: {{ api.stream.game }}</h1>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="twitchController.js"></script>
+  </body>
+</html>
