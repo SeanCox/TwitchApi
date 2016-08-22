@@ -3,6 +3,6 @@
         $http.get('/twitchapi').then(function(response){
           $scope.api = response.data
         })
-        $scope.greeting = "hello world"
+        $scope.user = "HearthstoneFR"
 
   })

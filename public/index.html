@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
-    <title>Twitch App</title>
-  </head>
-  <body ng-app="TwitchApp" ng-controller="TwitchController">
-    <!-- <p>{{ api }}</p> -->
-    <img src="{{ api.stream.channel.logo }}" />
-    <h1 >User Name: {{ api.stream.channel.display_name }}</h1>
-    <h1 >Game: {{ api.stream.game }}</h1>
-    <script src="lib/angular/angular.min.js"></script>
-    <script src="twitchController.js"></script>
+<head>
+  <meta charset="utf-8">
+  <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Twitch App</title>
+</head>
+<body ng-app="TwitchApp" ng-controller="TwitchController">
+  <div class="jumbotron">
+    <div class="container">
+      <h2>What is {{ user }} playing on Twitch</h2>
+      <div class="col-xs-6 col-md-3">
+        <img src="{{ api.stream.preview.large }}" />
+      </div>
+    </div>
+      <!-- <p>{{ api }}</p> -->
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+              <img src="{{ api.stream.channel.logo }}">
+            </a>
+          </div>
+          <div>
+            <h4 >User Name: {{ api.stream.channel.display_name }}</h4>
+            <h4 >Current Game: {{ api.stream.game }}</h4>
+            <script src="lib/angular/angular.min.js"></script>
+            <script src="twitchController.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-</html>
+  </html>
