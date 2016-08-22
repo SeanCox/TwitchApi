@@ -25,8 +25,10 @@
             </a>
           </div>
           <div>
+            <br>
             <h4 >User Name: {{ api.stream.channel.display_name }}</h4>
-            <h4 >Current Game: {{ api.stream.game }}</h4>
+            <br>
+            <h4><a href="{{api.stream.channel.url}}">Current Game: {{ api.stream.game }}</a></h4>
             <script src="lib/angular/angular.min.js"></script>
             <script src="twitchController.js"></script>
           </div>
